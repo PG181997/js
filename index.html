@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dad Jokes</title>
+  <link rel="stylesheet" href="">
+  <style>
+    .wrapper {
+      text-align: center;
+    }
+
+    .joke {
+      font-size: 5rem;
+      font-weight: 900;
+    }
+
+    .loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #FF3D00;
+  width: 3px;
+  height: 24px;
+  transform: translateX(-50%);
+}
+
+.hidden{
+  display: none;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="joke">
+      <span class="loader hidden"></span>
+      <p>Dad Jokes.</p>
+    </div>
+    <button class="getJoke">Get A Joke</button>
+  </div>
+
+  <script src="./jokes.js"></script>
+</body>
+
+</html>
